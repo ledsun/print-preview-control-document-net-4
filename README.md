@@ -5,6 +5,14 @@
 動作検証用のリポジトリです。
 
 
+## 変更点
+
+[PrintPreviewControl.Document](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.printpreviewcontrol.document?view=windowsdesktop-5.0) では、値をセットしたときに
+
+.NET 2 ～ 3.5 の間で `InvalidatePreview()` が呼ばれません。
+.NET 4 以降は `InvalidatePreview()` が呼ばれます。
+
+
 ## 動作検証方法
 
 
@@ -15,14 +23,6 @@
 .NET 3.5では、[`Form.cs`の24行目](https://github.com/ledsun/print-preview-control-document-net-4/blob/1bcd18694a585b1c86c1660c29051217434644ee/Net3.5/Form.cs#L24)で `printPreviewControl.InvalidatePreview();` を呼び出しを追加しています。
 この行をコメントアウトすると、印刷プレビューが表示されなくなります。
 
-
-
-## 変更点
-
-[PrintPreviewControl.Document](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.printpreviewcontrol.document?view=windowsdesktop-5.0) では、値をセットしたときに
-
-.NET 2 ～ 3.5 の間で `InvalidatePreview()` が呼ばれません。
-.NET 4 以降は `InvalidatePreview()` が呼ばれます。
 
 
 ## 関連情報
