@@ -12,7 +12,7 @@
 それぞれデバッグ実行すると同じように動きます。
 
 ほぼ同一のソースコードです。
-.NET 3.5では、`Form.cs`の24行目で `printPreviewControl.InvalidatePreview();` を呼び出しを追加しています。
+.NET 3.5では、[`Form.cs`の24行目](https://github.com/ledsun/print-preview-control-document-net-4/blob/1bcd18694a585b1c86c1660c29051217434644ee/Net3.5/Form.cs#L24)で `printPreviewControl.InvalidatePreview();` を呼び出しを追加しています。
 この行をコメントアウトすると、印刷プレビューが表示されなくなります。
 
 
